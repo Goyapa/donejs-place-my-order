@@ -1,0 +1,26 @@
+<can-component tag="pmo-loading">
+  <style type="less">
+    display: block;
+    
+    p { font-weight: bold; }
+  </style>
+  <template>
+    {{#eq state "resolved"}}
+          <content></content>
+        {{else}}
+          <div class="loading"></div>
+        {{/eq}}
+  </template>
+  <view-model>
+    import Map from 'can/map/';
+    import 'can/map/define/';
+
+    export default Map.extend({
+      define: {
+        message: {
+          value: 'This is the pmo-loading component'
+        }
+      }
+    });
+  </view-model>
+</can-component>
