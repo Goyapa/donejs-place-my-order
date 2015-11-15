@@ -1,0 +1,29 @@
+<can-component tag="pmo-order-history">
+  <style type="less">
+    display: block;
+    
+    p { font-weight: bold; }
+  </style>
+  <template>
+     <div class="order-history">
+          <div class="order header">
+            <address>Name / Address / Phone</address>
+            <div class="items">Order</div>
+            <div class="total">Total</div>
+            <div class="actions">Action</div>
+          </div>
+        </div>
+  </template>
+  <view-model>
+    import Map from 'can/map/';
+    import 'can/map/define/';
+
+    export default Map.extend({
+      define: {
+        message: {
+          value: 'This is the pmo-order-history component'
+        }
+      }
+    });
+  </view-model>
+</can-component>
